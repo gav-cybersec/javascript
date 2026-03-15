@@ -1,14 +1,23 @@
 console.log("Hello World!");
 
-// 1. Create an array called favoriteFoods with at least 6 foods you love.
-let favoriteFoods = ["Steak", "Sushi", "Fried Rice", "Burgers", "Pizza", "Pasta"];
+let favoriteFoods = ["Steak", "Sushi", "Fried Rice", "Burger", "Pizza", "Pasta"];
 
-// 2. Loop through the list and print: "One of my favorite foods is ______."
 for (let i = 0; i < favoriteFoods.length; i++) {
     console.log("One of my favorite foods is " + favoriteFoods[i] + ".");
 }
 
-// 3. Print out the rating for each food with a ranking
 for (let i = 0; i < favoriteFoods.length; i++) {
     console.log("My #" + (i + 1) + " favorite food is " + favoriteFoods[i]);
 }
+
+// 4a. Create a function printFoodRecommendation(foodName)
+function printFoodRecommendation(foodName) {
+    console.log("Have you ever tried " + foodName + "?");
+    console.log("I always recommend " + foodName + " to friends.");
+    console.log("Trust me — " + foodName + " is delicious.");
+}
+
+// 4b. Call the function at least 3 times
+printFoodRecommendation("Pizza");
+printFoodRecommendation("Sushi");
+printFoodRecommendation("Burger");
