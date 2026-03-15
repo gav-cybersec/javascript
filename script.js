@@ -10,14 +10,62 @@ for (let i = 0; i < favoriteFoods.length; i++) {
     console.log("My #" + (i + 1) + " favorite food is " + favoriteFoods[i]);
 }
 
-// 4a. Create a function printFoodRecommendation(foodName)
 function printFoodRecommendation(foodName) {
     console.log("Have you ever tried " + foodName + "?");
     console.log("I always recommend " + foodName + " to friends.");
     console.log("Trust me — " + foodName + " is delicious.");
 }
 
-// 4b. Call the function at least 3 times
 printFoodRecommendation("Pizza");
 printFoodRecommendation("Sushi");
-printFoodRecommendation("Burger");
+printFoodRecommendation("Steak");
+
+// Friends list
+let friendFavorites = [
+    "Pizza", "Sushi", "Pasta", "Falafel", "Burgers", "Ramen", "Pad Thai", "Curry", "Pho", "Nachos", "Gnocchi", "Donuts", "Steak", "Lasagna", "Biryani", "Tacos", "Croissant", "Churros", "Fried Rice", "Shawarma", "Miso Soup", "BBQ Ribs", "Hotpot", "Enchiladas", "Baklava", "Gyros", "Hummus", "Empanadas", "Pancakes", "Muffins", "Samosas", "Macarons", "Quiche", "Pierogi", "Arepas", "Okonomiyaki", "Ceviche", "Brisket", "Bao Buns", "Poutine", "Clam Chowder", "Fajitas", "Canelé", "Kimchi", "Tamales", "Omelette", "Biscuits", "Tempura", "Spring Rolls", "Crepes"
+];
+
+// 5–6. Foods with "a"
+let foodsWithA = [];
+
+for (let i = 0; i < friendFavorites.length; i++) {
+    if (friendFavorites[i].includes("a") || friendFavorites[i].includes("A")) {
+        console.log(friendFavorites[i]);
+        foodsWithA.push(friendFavorites[i]);
+    }
+}
+
+console.log(foodsWithA);
+
+// 7–8. Long vs short food names
+let longFoodNames = [];
+let shortFoodNames = [];
+
+for (let i = 0; i < friendFavorites.length; i++) {
+    if (friendFavorites[i].length > 6) {
+        longFoodNames.push(friendFavorites[i]);
+    } else {
+        shortFoodNames.push(friendFavorites[i]);
+    }
+}
+
+console.log(longFoodNames);
+console.log(shortFoodNames);
+
+// 9. Compare counts
+if (longFoodNames.length > shortFoodNames.length) {
+    console.log("There are more long-named foods.");
+} else {
+    console.log("There are more short-named foods.");
+}
+
+// 10. Longest food name
+let longestFood = "";
+
+for (let i = 0; i < friendFavorites.length; i++) {
+    if (friendFavorites[i].length > longestFood.length) {
+        longestFood = friendFavorites[i];
+    }
+}
+
+console.log("The longest food name in the list is " + longestFood + " with " + longestFood.length + " characters.");
